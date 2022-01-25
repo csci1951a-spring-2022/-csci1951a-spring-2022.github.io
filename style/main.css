@@ -15,9 +15,13 @@ body {
   font-family: "Europa-Regular", Helvetica, sans-serif;
   font-weight: 400;
   /* background-color: #ffebeb; /*change later!*/
+  /* old background color: #fafafa #383838 #969696
+  */
   background-color: #fafafa;
   font-size: 0.95rem;
-  color: #27282e;
+  /* old color: #27282e
+  */
+  color: #27272e;
 }
 
 h1,

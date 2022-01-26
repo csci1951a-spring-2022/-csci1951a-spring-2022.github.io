@@ -37,7 +37,6 @@ h6 {
   color: #ffffff;
   /* color: black; */
   font-family: "Vollkorn-ExtraBold";
-  font-weight: 700;
 }
 
 .test {
@@ -68,7 +67,7 @@ a:visited:active {
 }
 
 #header {
-  font-family: "Inconsolata";
+  font-family: "Vollkorn-ExtraBold";
   font-size: 15px;
 
   position: fixed;

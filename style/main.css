@@ -171,24 +171,23 @@ a:visited:active {
 #sidebar #overview p {
   margin-bottom: 1px;
 }
+
+
+
 #course-intro-panel a {
   color: #E09D9E;
 }
-.red {
-  color: #E09D9E !important;
-}
+
 
 #sidebar a,
 .pre-quiz a,
 .python a,
-.department-resouces a,
 .project deadline table a,
+.department-resouces a,
 #course-documents a {
   color: #E09D9E;
 }
-#sidebar a:hover,
-#sidebar a:focus,
-#sidebar a:active,
+
 #course-intro-panel a:hover,
 #course-intro-panel a:focus,
 #course-intro-panel a:active,
@@ -207,14 +206,22 @@ a:visited:active {
 .python a:active
 .department-resources a:active,
 .project deadline table a:active{
-  color: black;
+  color: white;
+  background-color: #E09D9E;
+}
+
+#sidebar a:hover,
+#sidebar a:focus,
+#sidebar a:active {
+  color:white;
+  background-color: #E09D9E;
 }
 
 .table .out a {
   /* border-left: 5px solid #ed5151 !important; */
   border-bottom: 3px solid black !important;
   padding: 3px !important;
-  color: white
+  color: #ffffff
 }
 
 .table .out a:hover {

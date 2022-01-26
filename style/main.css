@@ -94,7 +94,7 @@ a:visited:active {
   color: #ffffff;
 }
 #header nav a:hover {
-  background-color: #E09D9EE09D9E;
+  background-color: #E09D9E;
 }
 #header nav a.active {
   border-bottom: 3px solid #E09D9E;
@@ -214,6 +214,7 @@ a:visited:active {
   /* border-left: 5px solid #ed5151 !important; */
   border-bottom: 3px solid black !important;
   padding: 3px !important;
+  color: white
 }
 
 .table .out a:hover {

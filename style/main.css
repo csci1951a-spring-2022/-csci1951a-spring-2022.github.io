@@ -9,8 +9,8 @@
 }
 
 @font-face {
-  font-family: "Vollkorn-ExtraBold";
-  src: url("./fonts/Vollkorn-ExtraBold.ttf");
+  font-family: "RomanaBT";
+  src: url("./fonts/RomanaBTBold.ttf");
 }
 html {
 }
@@ -36,7 +36,7 @@ h5,
 h6 {
   color: #ffffff;
   /* color: black; */
-  font-family: "Vollkorn-ExtraBold";
+  font-family: "RomanaBT";
 }
 
 .test {
@@ -67,7 +67,7 @@ a:visited:active {
 }
 
 #header {
-  font-family: "Vollkorn-ExtraBold";
+  font-family: "RomanaBT";
   font-size: 15px;
 
   position: fixed;

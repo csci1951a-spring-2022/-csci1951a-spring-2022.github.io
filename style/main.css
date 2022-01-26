@@ -90,7 +90,8 @@ a:visited:active {
   font-weight: 900;
 }
 #header nav a {
-  color: #383838;
+  background-color: #383838;
+  color: #ffffff;
 }
 #header nav a:hover {
   background-color: #D99899;

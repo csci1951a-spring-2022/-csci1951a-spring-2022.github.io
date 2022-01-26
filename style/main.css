@@ -52,7 +52,7 @@ h1 {
 
 a,
 a:visited {
-  color: #D99899;
+  color: #E09D9E;
   text-decoration: none;
 }
 a:hover,
@@ -62,7 +62,7 @@ a:visited:hover,
 a:visited:focus,
 a:visited:active {
   /*color: #262629*/
-  color: #D99899;
+  color: #E09D9E;
   text-decoration: none;
 }
 
@@ -94,10 +94,10 @@ a:visited:active {
   color: #ffffff;
 }
 #header nav a:hover {
-  background-color: #D99899;
+  background-color: #E09D9EE09D9E;
 }
 #header nav a.active {
-  border-bottom: 3px solid #D99899;
+  border-bottom: 3px solid #E09D9E;
   font-weight: 700;
 }
 #header #header-img {
@@ -172,10 +172,10 @@ a:visited:active {
   margin-bottom: 1px;
 }
 #course-intro-panel a {
-  color: #D99899;
+  color: #E09D9E;
 }
 .red {
-  color: #D99899 !important;
+  color: #E09D9E !important;
 }
 
 #sidebar a,
@@ -184,7 +184,7 @@ a:visited:active {
 .department-resouces a,
 .project deadline table a,
 #course-documents a {
-  color: #D99899;
+  color: #E09D9E;
 }
 #sidebar a:hover,
 #sidebar a:focus,

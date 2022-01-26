@@ -8,6 +8,10 @@
   src: url("./fonts/Europa-Regular.otf");
 }
 
+@font-face {
+  font-family: "Vollkorn-ExtraBold";
+  src: url("./fonts/Vollkorn-ExtraBold.ttf");
+}
 html {
 }
 
@@ -30,9 +34,9 @@ h3,
 h4,
 h5,
 h6 {
-  color: #262629;
+  color: #ffffff;
   /* color: black; */
-  font-family: "Inconsolata";
+  font-family: "Vollkorn-ExtraBold";
   font-weight: 700;
 }
 

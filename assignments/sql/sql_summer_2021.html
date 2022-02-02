@@ -15,7 +15,7 @@
                 <h1>Assignment 1 <small>&laquo; SQL &raquo;</small></h1>
             </div>
 
-            <h3>Due: 11:59pm 02/14/2022 ET</h3>
+            <h3>Due: 11:59pm 06/01/2021 ET</h3>
             <p>
                 <img src="sql_clause.jpeg" alt="SQL Joke">
             </p>
@@ -69,8 +69,6 @@
                     <p>This part of the assignment builds off the exercises you completed in the lab. <b>If you have not yet completed the lab, please do so before starting this assignment.
                       There are some really useful hints and examples you can borrow from the lab for this assignment.</b>
                       The database and schema are described again below, but are the same from the lab.</p>
-                    
-                      <p>In this assignment, <b>you should use keywords in some of your queries.</b> Please remember to check if there are any required keywords before implementing your solution for each task. </p>
 
                     <p>
                         We have provided a database named <code>people.db</code> with the name, age, ID, and occupation of some Brown students and alumni.
@@ -90,33 +88,29 @@ people_friends(<strong>ID1</strong> INTEGER, <strong>ID2</strong> INTEGER)</pre>
                       <li>
                           (4 points) Write a SQL statement that returns the  <strong>name</strong> and number of people that like each person. Results should be ordered by count (descending), and then by name (A-Z). Save the query to <code>part1_problem1.sql</code>
                           <p>
-                              Keyword(s): Use a <code>LEFT JOIN</code>! <br> Hint: The following website is quite useful: <a href="http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/">http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/</a>
+                              Hint: Use a <code>LEFT JOIN</code>! The following website is quite useful: <a href="http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/">http://blog.codinghorror.com/a-visual-explanation-of-sql-joins/</a>
                           </p>
                       </li>
                       <li>
                               (4 points) Write a SQL statement that returns the two <strong>occupations</strong> that have the lowest count of popular people. Consider popular people as people who are liked by at least one other person. Return the two occupations and the counts. Results should be ordered by <strong>occupation</strong> (A-Z). Save the query to <code>part1_problem2.sql</code>                          <p>
-                                Keyword(s):: The <code>LIMIT</code> statement will come in handy!
+                              Hint: The <code>LIMIT</code> statement will come in handy!
                           </p>
                       </li>
 
                       <li>
                           (4 points) Write a SQL statement that returns the  <strong>name</strong> and  <strong>occupation</strong> of all people who have more than 3 friends. Results should be ordered by  <strong>name</strong> (A-Z). Save the query to <code>part1_problem3.sql</code>
                           <p>
-                            Keyword(s): You'll need to take a look at the <code>HAVING</code> function.
+                              Hint: You'll need to take a look at the <code>HAVING</code> function.
                           </p>
                       </li>
 
                       <li>
                           (4 points) Write a SQL statement that returns the distinct  <strong>name</strong> and <strong>age</strong> of all people who are liked by anyone younger than them. Results should be ordered by <strong>name</strong> (A-Z). Save the query to <code>part1_problem4.sql</code>.
-                      <p> </p>
-                        </li>
+                      </li>
 
                       <li>
                           (4 points) Write a SQL statement to find pairs (A, B) such that person A likes person B, but A is not friends with B. The query should return 4 columns:  <strong>ID</strong> of person 1, <strong>name</strong> of person 1, <strong>ID</strong> of person 2 and <strong>name</strong> of person 2. Results should be ordered by <strong>ID1</strong> (ascending), then <strong>ID2</strong> (ascending). Save the query to <code>part1_problem5.sql</code>
-                          <p>
-                            Keyword(s): You'll need to use the <code>JOIN</code> statement.
-                          </p>
-                        </li>
+                      </li>
                   </ol>
                   <br><p>Time to join stuff!</p><br>
 
@@ -161,24 +155,24 @@ FROM
                         You can add days to a particular day
                         by using the <code>date</code> function.
                         For example, in order to add 3 days to to '2012-07-16', you can use <code>date('2012-07-16', '+3 days')</code>
-                        <br>
-                          Keyword(s): The <code>UNION</code> statement should come in handy.
                       </p>
                     </li>
+                    <p>
+                      Hint: The <code>UNION</code> statement should come in handy.
+                    </p>
                     <li>
                       (10 points) Write a SQL query to count the number of movies that start with "The", end with a "2" or contain the word "shark".
                       Your query should be case insensitive and return one column with one entry. You should return a single value.
                     </li>
                     <p>
-                      Keyword(s): You may want to look into <code>CASE</code> statements and the <code>LIKE</code> operator. (Lab!)
+                      Hint: You may want to look into <code>CASE</code> statements and the <code>LIKE</code> operator. (Lab!)
                     </p>
                     <li>
                       (10 points) Write a SQL query to select the <strong>original_title</strong> of all movies and a column where there is a 1 if there exists another movie that has the
                       same vote average and the same runtime as that movie, and a 0 otherwise. Results should be ordered by <strong>original_title</strong> (A-Z).
                     </li>
                     <p>
-                      Keyword(s): You may want to look into the <code>EXISTS</code> operator.<br>
-                      Hint: Think about possible edge cases.
+                      Hint: You may want to look into the <code>EXISTS</code> operator. Additionally, think about possible edge cases.
                     <li>
                       (10 points) Write a SQL query that returns the <strong>original_title</strong>, <strong>vote_average</strong> and <strong>review</strong> of every movie. The reviews depends on the vote_average
                       as described described in the <code>scores</code> table. For example, movies with a vote average between 2 and 3.9 (inclusive) are reviewed as 'poor',
@@ -194,15 +188,15 @@ FROM
 'do not watch' | 2.3 | 'poor'
 </pre>
                     <p>
-                      Keywords(s): Look into the <code>BETWEEN</code> statement and how it can be used in a <code>JOIN</code>.
-                      <br>
-                      Hint: Do not modify the current database by using <code>UPDATE</code>. Take a look at the <code>CASE</code> operation example from the lab.
+                      Hint: Look into the <code>BETWEEN</code> statement and how it can be used in a join.
                     </p>
+                    <p>
+                      Another Hint: Do not modify the current database by using <code>UPDATE</code>. Take a look at the <code>CASE</code> operation example from the lab.
+                    </p>
+
                     <li>
                       (10 points) Write a SQL query that finds the <strong>original_title</strong>, <strong>release_date</strong> and <strong>revenue</strong>
                       of all the movies whose revenue exceeded the average revenue of all the movies released on the same day (including itself). Results should be ordered by <strong>release_date</strong> (ascending), and then <strong>revenue</strong> (descending).
-                      <br>
-                      Keywords(s): You'll find the <code>GROUP BY</code>, <code>AVG</code>, and <code>JOIN</code> operations helpful!
                     </li>
                   </br>
                     <li>
@@ -216,9 +210,9 @@ FROM
                       </p>
 
                       <p>
-                        Keywords(s): The <code>JOIN</code> statement will come in handy! <br>
                         Hint: Refer to the examples from the lab!
                       </p>
+
 
                     </li>
 

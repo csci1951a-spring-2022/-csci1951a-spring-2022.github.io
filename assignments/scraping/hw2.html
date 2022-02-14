@@ -14,7 +14,7 @@
             <div class="page-header center">
                 <h1>Assignment #2 <small>&laquo; Data Scraping and Cleaning &raquo;</small></h1>
             </div>
-            <h3>Due: 11:59pm 06/08/2021 ET</h3>
+            <h3>Due: 11:59pm 02/23/2022 ET</h3>
 
             <h2>Overview</h2>
 
@@ -33,7 +33,7 @@
             <h3>Getting the Stencil</h3>
             <br>
                 <p>
-                  You can click <a href = https://classroom.github.com/a/IfenDk45 >here</a> to get the stencil code for Homework 2. Reference <a href="https://docs.google.com/document/d/1v3IQrC_0pFxsRBXsvCEzKBDAmYjzuSJCvXhkg8ewDn0/edit">this guide</a> for more information about Github and Github Classroom.
+                  You can click <a href = https://classroom.github.com/a/Bqh4Fby2 >here</a> to get the stencil code for Homework 2. Reference <a href="https://docs.google.com/document/d/1v3IQrC_0pFxsRBXsvCEzKBDAmYjzuSJCvXhkg8ewDn0/edit">this guide</a> for more information about Github and Github Classroom.
                 </p>
                 
                 <p>
@@ -50,7 +50,7 @@
                 <p>If you are working remotely, your final handin should still work in the course virtual environment.</p>
                 <hr> -->
                 <h2>Part 1: Web Scraping </h2>
-                <h3>35 points</h3>
+                <!--<h3>35 points</h3>-->
                     <p>
                         To get started, we’re going to want to collect some data on the most active stocks in the market. Conveniently, investing.com <a href="https://www.investing.com/equities/most-active-stocks">publishes this exact data</a>. To collect this data, you’ll make use of web scraping.
                     </p>
@@ -74,10 +74,17 @@
                     <p>You'll use Beautiful Soup, a Python package, to scrape the HTML. This will require looking at the HTML structure of the investing.com page. You can select various HTML elements on a page by tag name, class name, and/or id. Using <a href="https://zapier.com/blog/inspect-element-tutorial/">inspect element</a> on your web browser, you can check what HTML tags and classes contain the relevant information.</p>
                     <p><strong>Note:</strong> You should collect information from the 50 most active stocks in the investing.com table. This is what the investing.com HTML will contain by default.</p>
 
-		    <p><strong>Hint:</strong> All extracted information will be strings. You’ll want to make sure the price and percent change are floats (i.e., "24.5%" should become the float 24.5), and volume is an integer. You should also parse the percent change to be a decimal, rather than a percentage. Lastly, make sure to fix the HQ state capitalization (i.e. California and california should be interpreted the same way).</p>
+		    <p><strong>Hint:</strong> All extracted information will be strings. You’ll want to make sure the price and percent change are floats (i.e., "24.5%" should become the float 24.5), and volume is an integer. Lastly, make sure to fix the HQ state capitalization (i.e. California and california should be interpreted the same way).</p>
 		    <p><strong>Another Hint:</strong> You will probably want to look ahead to the queries you will ultimately ask in Part 4--this will affect the type of cleaning you need to do.
                     </p>
-
+            <h3>Ethics Component:</h3>
+            <h4>Record your responses in the writeup.txt</h4>
+            <p>
+                In this part of the assignment, note that you are asked to scrape data from a public website. List and explain three scenarios where scraping data may pose a risk to external and internal stakeholders. 
+                Feel free to refer to <a href="https://www.promptcloud.com/blog/is-data-scraping-ethical/">this</a>
+            </p>
+                    
+                    
                 <h3>A web scraping example</h3>
                     <p>Consider the following simple HTML page with an unordered lists:</p>
 <pre>
@@ -106,8 +113,33 @@ items = soup.find(ul).find_all("li")
 
             <h2>Part 2: API Requests</h2>
 
-            <h3>30 points</h3>
-
+           <!--- <h3>30 points</h3>-->
+           <h3>Ethics Component:</h3>
+           <h4>Record your responses in the writeup.txt</h4>
+           <p>
+            With investing.com, the stock data you have been asked to look into is public content, but many websites we use daily collect user-generated content. Consider one of the following websites (or a website of your choice) that collects user-generated content and has interesting social/ethical implications: <br>
+            <ul>
+                <li> <a href=https://www.inspire.com>Inspire</a>: a social network for health</li>
+                <li> <a href=https://nextdoor.com>NextDoor</a>: a social network for neighborhoods</li>
+                <li> <a href=https://www.tripadvisor.com>TripAdvisor</a>: a site for finding travel deals and reviews</li>
+                <li> <a href=https://www.reddit.com>Reddit</a>: a network of online discussion communities based on people's interests</li>
+                <li> <a href=https://venmo.com>Venmo</a>: a mobile payment service with a social networking component</li>
+                </ul>
+                Research the different uses, sections, and users of one site. Search online for any social context or controversies surrounding the sites. <b>Based on your exploration of the site, answer the following questions:</b>
+                <ol type="a">
+                <li> What do you imagine a user might expect about the privacy of their personal data on the site? Does the expectation of privacy vary across different sections or types of data on the site? </li>
+                <li> Identify one vulnerable user group for whom data scientists scraping data should exercise more caution. </li>
+                <li> Describe one project or use case where scraping data from this site could cause harm. Describe one project or use case where scraping data from this site could be beneficial. </li>
+                <li> What types of data on the site should data scientists be especially cautious about collecting? If any, what types of data on the site should not be scraped by data scientists?
+                <ol type = "i">
+                <li> Consider the creator of the data, specific content of the data, user expectations of privacy, and biases that shape the data. </li>
+                <li> Data types could be specific, like usernames and dates, or general, like posts about a certain subject or posts from certain user groups.</li>
+                </ol> 
+                </li>
+                </ol>		
+                </li>
+           </p>
+           <br><hr><br>
             <p>Rather than using web scraping to collect this data, we’ll make use of an API.
               You’ll make requests to this API using Python’s <code>requests</code> library.
               IEX Trading offers an API with various endpoints that offer information about stocks.
@@ -118,27 +150,50 @@ items = soup.find(ul).find_all("li")
 
             <ul>
                 <li>the average closing price of each of the most active stocks over the last 5 days</li>
-                <li>the number of articles recently written about each stock</li>
+                <li>the closing price of the previous day for each of the most active stocks</li>
             </ul>
 
             <p>To do this, you’ll want to make use of the <a href="https://iexcloud.io/docs/api/#historical-prices">chart endpoint</a> to collect the historical stock pricing.
               Then, you will want to parse through the data and average the closing price for each stock.
             <strong>IMPORTANT:</strong> Set the parameter "chartCloseOnly" to <code>True</code> when you request from the chart endpoint to avoid immediately reaching your API call limit! (Read about URL parameters <a href="https://en.wikipedia.org/wiki/Query_string">here</a>.)</p>
 
-            <p>Using the <a href="https://iexcloud.io/docs/api/#news">news endpoint</a>, you should get the articles for a specific stock. Then, you should count how many articles were returned by the API.
+            <p>Using the <a href="https://iexcloud.io/docs/api/#previous-day-price">Previous Day Price endpoint </a>, 
+                you should get the previous day adjusted price data for a specific stock. 
+                You should not add stocks with no previous price to the table. 
+            </p>
+           <!--- <p>Using the <a href="https://iexcloud.io/docs/api/#news">news endpoint</a>, you should get the articles for a specific stock. Then, you should count how many articles were returned by the API.
                 We will define recently as <strong>since May 25, 2021 00:00:00 (GMT) </strong>. The news API includes
                 the unix epoch time for each article in <strong>milliseconds</strong>. You should calculate the epox time of May 25, 2021 00:00:00 (GMT) and convert to milliseconds (multiply by 1000).
                 Feel free to hardcode this value and use websites to calculate it rather than calculate it by hand.
             </p>
+        -->
 
             <p><strong>Hint:</strong> Some stocks from investing.com are not listed on major stock exchanges, and thus the IEX Trading API does not have data on them. In this case, the IEX Trading API will return a <a href="https://en.wikipedia.org/wiki/HTTP_404">404 status code</a>. Your program should handle this error by disregarding stocks from investing.com if they are not present in the IEX Trading API. That is, these stocks should not be added to the database. You can check the status code of a request by checking <code>requests.get(...).status_code</code></p>
 
+            
+
             <p><strong>Another Hint:</strong> When calculating average closing price for the last 5 days, make sure to only include the stocks that have data for at least one of the past five days. (i.e. if a stock doesn't list any of the closing prices for the past five days, including that stock might give you an error.)
                         </p>
+            
+                        <h3>Ethics Component</h3>
+                        <h4>Record your responses in writeup.txt</h4>
+                        <p>
+                            Let’s think about missing data for a second. It’s important to remember that the scraped data isn’t all encompassing. View this artwork by Mimi Onuha: <a href="https://mimionuoha.com/the-library-of-missing-datasets">here</a> <br>
+                            What kind of data may be difficult to get access to? Give one example. Why do you think that is? What is the impact of this missing or inaccessible data? (3 points)
+                        </p>
+            
+
 
                         <br><hr><br>
             <h2>Part 3: Databases</h2>
-            <h3>15 points</h3>
+            <h3>Ethics Component</h3>
+            <h4>Record your responses in writeup.txt</h4>
+            <p>
+                Read <a href="https://www.technologyreview.com/2020/12/03/1012797/fair-value-fixing-the-data-economy/">the article here</a> <br>
+                Question: The concept of a “data economy” comes with the perspective that data is a form of economic resource and capital. To what, if any, standards of social responsibility should we hold researchers, companies, and other entities that use data to turn a profit? What price would you put on your own personal data, if any? 
+                Justify your opinion and describe which opinions you agree or disagree with in the article.
+            </p>
+            <br><hr><br>
 
             <p>You now realize that to truly harness the data, you need to turn it into a database you can query. Using the provided stencil, create a database with these tables:</p>
 
@@ -153,9 +208,9 @@ items = soup.find(ul).find_all("li")
               <li><strong>quotes</strong>
                 <ul>
                   <li><code>symbol</code>, a string of the stock symbol that is the primary key of this table</li>
+                  <li><code>prev_close</code>,  the previous closing price of this stock, a number</li>
                   <li><code>price</code>,  the current stock price, a number</li>
                   <li><code>avg_price</code>, the average closing price over the last five days, a number</li>
-                  <li><code>num_articles</code>, the number of recent articles about this stock</li>
                   <li><code>volume</code>, the volume of this stock as a number</li>
                   <li><code>change_pct</code>, the percent change in the stock’s price today, as a decimal</li>
                 </ul>
@@ -193,17 +248,18 @@ c.execute('INSERT INTO person VALUES (?, ?)', (some_variable, another_variable))
             <p>The data is saved into the data.db file. If you want to take a look at it, one way is to use a website such as <a href="https://inloop.github.io/sqlite-viewer/">https://inloop.github.io/sqlite-viewer/</a> where you can load the file and query data from the tables. </p>  
             <br><hr><br>
             <h2>Part 4: Queries</h2>
-            <h3>20 points</h3>
             <p>Each SQL statement should be stored in its own file: <code>query1.sql</code>, <code>query2.sql</code>, etc.
 
             <ul>
                 <li>Write a SQL statement to return the symbol and name of the stock with the biggest percent gain relative to its five day average price. This should be calculated as the current price divided by the average price.</li>
-                <li>Write a SQL statement to return the name of the stock with the highest price that has less than 11 articles.</li>
+                <li>Write a SQL statement to return the name of the stock with the highest price of all stocks that have a previous close greater than their 5 day average price</li>
                 <li>Write a SQL statement to return the symbol and name of all stocks with prices above $35 and where the absolute difference between the current price and 5 day average price is less than $5. Your results should be sorted by the absolute difference between current price and 5 day average price, in ascending order. </li>
-                <li>Write a SQL statement to return each state and number of companies headquartered in that state (no need to include states not in your dataset). Order alphabetically by state (A -> Z).</li>
+                <li>Write a SQL statement to return each state and number of companies headquartered in that state (no need to include states not in your dataset). Order alphabetically by location (A -> Z).</li>
             </ul>
 
             <br><hr><br>
+
+            <!---
             <h2>Part 5: Socially-Responsible Web Scraping</h2>
             <h3> 15 points </h3>
 		CS1951a wants to help you identify and grapple with societal consequences at each stage of the data lifecycle. There are many ethical considerations data scientists should take into account before 		collecting data through web scraping, even if the data is publicly available.
@@ -250,8 +306,8 @@ c.execute('INSERT INTO person VALUES (?, ?)', (some_variable, another_variable))
             The concept of a “data economy” comes with the perspective that data is a form of economic resource and capital. To what, if any, standards of social responsibility should we hold researchers, companies, and other entities that use data to turn a profit? What price would you put on your own personal data, if any? Justify your opinion and describe which opinions you agree or disagree with in the article.
         </li>
 		</ol>
-
-            <br><hr><br>
+    -->
+            
             <!-- To be updated -->
             <h2>Handing In</h2><br>
                 <p>After finishing the assignment (and any assignment in the future), run <code>python3 zip_assignment.py</code> in the command line from your assignment directory, and fix any issues brought up by the script. </p>
@@ -265,6 +321,8 @@ c.execute('INSERT INTO person VALUES (?, ?)', (some_variable, another_variable))
             <h2>Credits</h2>
                 <p>
                     Made with &hearts; by Jacob Meltzer and Tanvir Shahriar (2019 TAs), updated by Natalie Delworth and Nazem Aldroubi (2020 TAs); Daniela Haidar, Daniel Civita Ramirez, JP Champa and Nam Do (2021 Spring TAs), and again by Aakansha Mathur and Nam Do (2021 Summer TAs).
+                    <br>
+                    Updated by Daniela Haidar, Benjamin Shih, James Shi, Micah Bruning, Aakansha Mathur in Spring 2022. STA component was updated by Aanchal Seth and Joanna Tasmin in Spring 2022.
                 </p>
         <div class="col-md-2"></div>
         <br><br>

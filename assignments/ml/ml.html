@@ -77,6 +77,32 @@
                 We have written a function <code>img_distance</code> which calculates an element-wise (pixel-by-pixel) difference. We won't be grading this difference, but to check if your k-means is implemented correctly, note that with <code>K=16</code>
                 and <code>max_iters = 50</code>, our distance is around <b>62</b>. This is purely for your reference.
                 </p>
+                <p>Answer the following questions in <code>writeup.md</code>.<p>
+                <ol>
+                    <li><p>Explain your K-Means algorithm. What are the parts of your algorithm, and how do they work together to divide your samples into different clusters?</p>
+                    </li>
+                    <li><p>What is K-Means used in the context of image compression? That is:
+                        <ul>
+                            <li>What is each data point that is being divided into clusters? what does each cluster represent?</li>
+                            <li>How does changing the number of clusters impact the result of the song dataset and the image compression dataset?</li>
+                        </ul></p>
+                    </li>
+                    <li><p>What is the difference between supervised classification, supervised regression, and unsupervised learning? Give an example of an algorithm under each, specifying the type of data that the algorithm takes in and the goal of the algorithm, and an explanation for why they are a supervised classification/supervised regression/unsupervised algorithm.</p></li>
+                </ol>
+                <h3><b>Ethics Part 1</b>: Fair K-Means</h3>
+                    <p>The growing research field of machine learning fairness attempts to prevent bias in ML systems. Research efforts to computationally define fairness have given rise to a debate about what it means for a machine learning model to be “fair.” Fair K-Means is one example of an attempt to define and improve fairness in clustering problems. The goal of the following questions is to demonstrate how you could incorporate machine learning fairness in your K-means implementation and explore the limitations of this approach to fairness.
+                    </p>
+                    <p style="font-style: italic;">Your responses should be thoughtful, provide justification for your claims, and be concise but complete. See the <a href="https://docs.google.com/document/d/1hXGxoW8DQzIBh1yW2989fZhOIBgJ4w8BMN6lXjbnY-U/edit?usp=sharing">response guide</a> for more guidance.</p>
+                    <h4> Questions </h4>
+                    <p>Read <a href="https://montrealethics.ai/research-summary-fairness-in-clustering-with-multiple-sensitive-attributes/">this summary</a> of a research paper proposing a clustering algorithm called Fair K-Means. If you’re interested, the full paper is linked <a href="https://arxiv.org/pdf/1910.05113.pdf">here</a>. 
+                    </p>
+        <ol>
+                    <li><p>Describe any methods you would add compared to your implementation of regular K-Means and where you would call them. You don’t need to understand the mathematical details of the Fair K-Means algorithm to have a general idea of the key changes necessary to modify your solution.</p>
+                    </li>
+                    <li><p>How does the Fair K-means algorithm define ‘fairness’? Do you agree with this definition, and why/why not? Describe a situation or context where this definition of fairness might not be sufficient, or match your own perception of fairness. </p>
+                    </li>
+                    <li><p>In your opinion, are there any situations in which even a perfectly fair ML system might still cause or even exacerbate harm? Are there other metrics or areas of social impact you might consider? Justify your opinion.</p>
+        </li></ol>
                 
                 <br><hr><br>
     
@@ -224,28 +250,17 @@
                 <h3>30 points</h3>
                 <p>Answer the following questions in <code>writeup.md</code>.<p>
                 <ol>
-                    <li><p>Explain your K-Means algorithm. What are the parts of your algorithm, and how do they work together to divide your samples into different clusters?</p>
-                    </li>
-                    <li><p>What is K-Means used in the context of image compression? That is:
-                        <ul>
-                            <li>What is each data point that is being divided into clusters? what does each cluster represent?</li>
-                            <li>How does changing the number of clusters impact the result of the song dataset and the image compression dataset?</li>
-                        </ul></p>
-                    </li>
-                    <li><p>What is the difference between supervised classification, supervised regression, and unsupervised learning? Give an example of an algorithm under each, specifying the type of data that the algorithm takes in and the goal of the algorithm, and an explanation for why they are a supervised classification/supervised regression/unsupervised algorithm.</p></li>
-                    <h3>Fair K-Means</h3>
-                    <p>The growing research field of machine learning fairness attempts to prevent bias in ML systems. Research efforts to computationally define fairness have given rise to a debate about what it means for a machine learning model to be “fair.” Fair K-Means is one example of an attempt to define and improve fairness in clustering problems. The goal of the following questions is to demonstrate how you could incorporate machine learning fairness in your K-means implementation and explore the limitations of this approach to fairness.
-                    </p>
-                    <p style="font-style: italic;">Your responses should be thoughtful, provide justification for your claims, and be concise but complete. See the <a href="https://docs.google.com/document/d/1hXGxoW8DQzIBh1yW2989fZhOIBgJ4w8BMN6lXjbnY-U/edit">response guide</a> for more guidance.</p>
-                    <h4> Questions </h4>
-                    <p>Read <a href="https://montrealethics.ai/research-summary-fairness-in-clustering-with-multiple-sensitive-attributes/">this summary</a> of a research paper proposing a clustering algorithm called Fair K-Means. If you’re interested, the full paper is linked <a href="https://arxiv.org/pdf/1910.05113.pdf">here</a>. 
-                    </p>
-                    <li><p>Give an overview of how you would modify your Kmeans class to implement Fair K-Means in <code>kmeans.py</code>. Describe any methods you would add and where you would call them. You don’t need to understand the mathematical details of the Fair K-Means algorithm to have a general idea of the key changes necessary to modify your solution.</p>
-                    </li>
-                    <li><p>How does the Fair K-means algorithm define fairness? Describe a situation or context where this definition of fairness might not be appropriate, or match your own perception of fairness. </p>
-                    </li>
-                    <li><p>Are there any situations in which even a perfectly fair ML system might still cause or even exacerbate harm? Are there other metrics or areas of social impact you might consider? Justify your opinion. </p>
-                    </li>
+                    <li><p>Based on the text, “Algorithms, if left unchecked, can create highly skewed and homogenous clusters that do not represent the demographics of the dataset. ”</p>
+                        <ul><li><p>Identify a situation where an algorithm has caused significant social repercussions (you can talk about established companies or even any algorithms that you have encountered in your daily life). </p></li>
+                            <li><p>Based on your secondary knowledge of the situation what happened, why do you think it happened, and how would you do things differently (if you would). Justify your choices.</p></li>
+                        </ul>
+                    </li><p>Read <a href="https://we-make-money-not-art.com/algorithms-of-oppression-how-search-engines-reinforce-racism/">this article</a> and answer the following questions:
+</p></li>
+                    <ul><li><p>How did Google respond to this? (Read:<a href="https://screenrant.com/google-search-autocomplete-block-biased-election-suggestions/#:~:text=Google%20will%20now%20be%20taking,candidates%20or%20parties%20they%20choose">this</a> for more context)
+</p></li>
+                        <li><p>Experiment with the autocomplete feature of Google now. What do you notice now? How do you feel about the way Google handled this solution? List one area in which Google can still improve. 
+</p></li>
+</ul>
                 </ol>
                 <h4>
                     Additional Information
@@ -255,6 +270,9 @@
                     </li>
                     <li> If you’re interested in examining other concerns of social impact beyond fairness, check out <a href="https://www.technologyreview.com/2021/03/11/1020600/facebook-responsible-ai-misinformation/">this article</a> describing challenges to the fairness paradigm at Facebook.
                     </li>
+                    <li>If you can, we highly, highly recommend reading Dr. Safiya Noble’s Algorithms of Oppression! You will not regret it.</li>
+                    <li><a href="https://pair-code.github.io/what-if-tool/">Here</a>’s a cool tool to visualise machine learning models.</li>
+
                 </ul>
     
                 <br><hr><br>
@@ -268,7 +286,7 @@
                 <br><hr><br>
                 <h2>Credits</h2>
                     <p>
-                        Made in Spring 2020 by Karlly, Huayu, and Arvind, adapted from the previous TA staff for CS1951A. Revised for Spring 2021 by JP & Daniela. Updated in Summer 2021 by Nam and Evan.
+                        Made in Spring 2020 by Karlly, Huayu, and Arvind, adapted from the previous TA staff for CS1951A. Revised for Spring 2021 by JP & Daniela. Updated in Summer 2021 by Nam and Evan. Updated in Spring 2022 by Joanna and Aanchal.
     
                         Spotify dataset sourced from <a href="https://www.kaggle.com/leonardopena/top-spotify-songs-from-20102019-by-year">Kaggle</a>.
                     </p>

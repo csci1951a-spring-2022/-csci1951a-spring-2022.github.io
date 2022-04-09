@@ -32,11 +32,11 @@
   <div class="stackedit__right">
     <div class="stackedit__html">
       <h1 id="assignment-6---data-visualization">Assignment 6 - Data Visualization</h1>
-<p><strong>Due</strong>: 11:59PM Eastern Time, <strong>July 30th</strong>, 2021</p>
+<p><strong>Due</strong>: 11:59PM Eastern Time, <strong>April 19th</strong>, 2022</p>
 <p><img src="https://cs1951a-s21-brown.github.io/assignments/data_viz/dataviz_meme.png" alt="data visualization meme"></p>
 <h2 id="getting-started">Getting Started</h2>
 <h3 id="getting-the-stencil">Getting the stencil</h3>
-<p>You can click <a href="https://classroom.github.com/a/QltvyijU">this link</a> to get the stencil for this assignment.</p>
+<p>You can click <a href="https://classroom.github.com/a/Z8TyZT4j">this link</a> to get the stencil for this assignment.</p>
 <p><strong>Important</strong>: Please view <a href="#appendix-a-stencil-code-structure">Appendix A</a> for the stencil code structure.</p>
 <h3 id="python-data-visualization-modules">Python Data Visualization Modules</h3>
 <p>In this assignment, you may use packages that have not been installed on our course virtual environment. Please refer to <a href="#appendix-b-how-to-install-a-new-package-in-your-own-virtual-environment">Appendix B</a> for instructions on how to install new modules on your virtual environment. You will not have the write access to install packages on the our course virtual environment on the department filesystem, so please let the HTA know if there is any Python module that is yet available in the course environment and you think should be added to the official course virtual environment.</p>
@@ -151,21 +151,42 @@
 <li>What does the disparity in traffic stops look like in each county? Think the difference between the number of traffic stops on drivers of some race versus some other (dividing by the number of traffic stops in that county).</li>
 </ul>
 <p>We recognize that it is hard to have the hover effects that Plotly interactive graphs provide when just downloading and including a static image in the writeup. Therefore, you can just include a static graph in your writeup, and we will check your code to see your Plotly graph(s) on our machines later – no penalty at all!</p>
+<!--
 <h3 id="stage-n-extra-credit">Stage N: Extra Credit</h3>
 <p><em>(15 points)</em></p>
 <p>Code in this section goes into <code>stage_n.py</code></p>
 <p>You can analyze <strong>up to three additional aspects</strong> of your choice, and we will give you <strong>at most five extra credit points per each</strong> additional aspect that you analyze. You will receive 2.5 points for producing a good graph (clear, accessible, makes sense for your goal of analysis, and clear graph analysis), and an extra 2.5 if the graph is unique to the other graphs that you have produced in this assignment, for a total of 5 points max per each graph.</p>
 <p>For this section, we will give at most 15 points as extra credit towards the assignment.</p>
+-->
+<h2 id="ethics-2">Ethics Component (Part 2)</h2>
+      <p><em>(10 points)</em></p>
+      <ol>
+        <li> (8 points)  Evaluate the accessibility of the graphs that you produced. 
+          <ul>
+          <li>Specifically: Name two user groups that should find your graphs accessible and explain why. (A user group would be a subset of your users who share a common trait, for example: children, or people with hearing difficulties)</li>
+          <li>Name two user groups who may have difficulty accessing your graphs and explain why. (Hint: Disability can be permanent, temporary, or situational as mentioned in the above readings) </li>
+          <li>Given more time and resources, list two actions that would make this dashboard more accessible to a wider audience. Talk about how you could implement these steps in the future. If not, why? Reflect on these choices.</li>
+          </ul></li>
+        <li>(2 points) Think about the stages of your design and implementation process. What did you find easy about factoring accessible visualization practices into your graphs? List two factors.</li>
+      </ol>
+
 <h2 id="handing-in">Handing In</h2>
 <p>As per usual, please run <code>python3 zip_assignment.py</code> to zip the assignment and submit onto Gradescope. The script will include all the files in your directory (e.g., all the code <code>.py</code> files, all your graphs, and the <code>writeup.md</code> of your report), <strong>except for</strong> the files in the <code>data</code> folder.</p>
 <p>After submitting, please make sure that your Gradescope submission includes your filled-out <code>writeup.md</code> report and all the code that you use to produce the graphs in your report.</p>
 <p><strong>Note</strong>: Manually zipping your files risks (1) not including some files that will be used as part of our grading, and (2) your code not upholding our anonymous grading policy. Please use the <code>zip_assignment.py</code> script to zip and submit, or directly submit through Github.</p>
+<!---
 <h2 id="parting-words">Parting words</h2>
 <p>Congratulations on finishing your last homework assignment in the course! We hope that our course has been educational and fun. We truly believe that you’re set to becoming an amazing data scientist.</p>
+
 <p>We’d love to <a href="https://forms.gle/LKtYJHyFYo3vzwjN8">hear any constructive feedback</a> about our course.</p>
 <p>Last but not least, we hope that you enjoy <a href="https://open.spotify.com/playlist/4oGhCa70z7BlUr5IVHrPoZ?si=34607be01b47465d">our parting gift</a>.</p>
+-->
+
+
+
+
 <h2 id="credits">Credits</h2>
-<p>This assignment was made by Nam (ndo3) in Summer 2021.</p>
+<p>This assignment was made by Nam (ndo3) in Summer 2021 and updated by Aakansha Mathur (amathur7) in Spring 2022.</p>
 <h2 id="appendix">Appendix</h2>
 <h3 id="appendix-a-stencil-code-structure">Appendix A: Stencil Code Structure</h3>
 <p>The structure of the stencil is as follows:</p>
@@ -213,17 +234,7 @@
 <p><strong>Step 3</strong>: See whether the module is successful installed on your machine by running your program (that contains the import line again). If it does not (the <code>ModuleNotFoundError</code> shows up again), feel free to come to TA hours for help! Be sure that you are in the virtual environment when installing the module and when running the code that contains the module import statements.</p>
 </li>
 </ul>
-<h2 id="ethics-2">Ethics Component (Part 2)</h2>
-      <p><em>(10 points)</em></p>
-      <ol>
-        <li> (8 points)  Evaluate the accessibility of the graphs that you produced. 
-          <ul>
-          <li>Specifically: Name two user groups that should find your graphs accessible and explain why. (A user group would be a subset of your users who share a common trait, for example: children, or people with hearing difficulties)</li>
-          <li>Name two user groups who may have difficulty accessing your graphs and explain why. (Hint: Disability can be permanent, temporary, or situational as mentioned in the above readings) </li>
-          <li>Given more time and resources, list two actions that would make this dashboard more accessible to a wider audience. Talk about how you could implement these steps in the future. If not, why? Reflect on these choices.</li>
-          </ul></li>
-        <li>(2 points) Think about the stages of your design and implementation process. What did you find easy about factoring accessible visualization practices into your graphs? List two factors.</li>
-      </ol>
+
 
     </div>
   </div>
